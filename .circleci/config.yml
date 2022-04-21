@@ -50,7 +50,7 @@ jobs:
           command: mvn clean install
       - run:
           name: Validate WAR file
-          command: pwd && ls -la ./target && chmod 755 ./home/java_web_app_circleci/target/LoginWebApp-1.war    
+          command: pwd && ls -la ./target && chmod 755 ./target/LoginWebApp-1.war    
           
       - run:
           name: Deploy to tomcat server over SSH
