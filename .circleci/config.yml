@@ -56,8 +56,8 @@ jobs:
           name: Deploy to tomcat server over SSH
           command: |
             ls -la ./target
-            scp -o "StrictHostKeyChecking=no" ./home/java_web_app_circleci/target/LoginWebApp-1.war ec2-user@ec2-3-95-250-166.us-east-1a.compute-1.amazonaws.com:/tmp
-            ssh -o "StrictHostKeyChecking=no" ec2-user@ec2-3-95-250-166.us-east-1a.compute-1.amazonaws.com "sudo mv /home/java_web_app_circleci/target/LoginWebApp-1.war /opt/tomcat/webapps/ && pwd && sudo ls -la /opt/tomcat/webapps/"
+            scp -o "StrictHostKeyChecking=no" ./home/java_web_app_circleci/target/LoginWebApp-1.war ec2-user@ec2-18-215-146-186.us-east-1a.compute-1.amazonaws.com:/tmp
+            ssh -o "StrictHostKeyChecking=no" ec2-user@ec2-18-215-146-186.us-east-1a.compute-1.amazonaws.com "sudo mv /home/java_web_app_circleci/target/LoginWebApp-1.war /opt/tomcat/webapps/ && pwd && sudo ls -la /opt/tomcat/webapps/"
           
       - run:
           name: Deploy artifact to nexus
